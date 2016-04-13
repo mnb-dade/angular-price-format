@@ -9,7 +9,8 @@ angular.module('angular-price-format', [])
                 elem.priceFormat({
                     prefix            : (typeof attrs.prefix    === 'undefined')?'' :attrs.prefix,
                     centsSeparator    : (typeof attrs.cents     === 'undefined')?',':attrs.cents,
-                    thousandsSeparator: (typeof attrs.thousands === 'undefined')?'.':attrs.thousands
+                    thousandsSeparator: (typeof attrs.thousands === 'undefined')?'.':attrs.thousands,
+                    allowNegative     : (typeof attrs.negatives === 'undefined')?false:true
                 });
                 return elem[0].value;
             });
@@ -17,7 +18,8 @@ angular.module('angular-price-format', [])
                 elem.priceFormat({
                     prefix            : (typeof attrs.prefix    === 'undefined')?'' :attrs.prefix,
                     centsSeparator    : (typeof attrs.cents     === 'undefined')?',':attrs.cents,
-                    thousandsSeparator: (typeof attrs.thousands === 'undefined')?'.':attrs.thousands
+                    thousandsSeparator: (typeof attrs.thousands === 'undefined')?'.':attrs.thousands,
+                    allowNegative     : (typeof attrs.negatives === 'undefined')?false:true
                 });      
                 return elem[0].value;
             });
